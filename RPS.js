@@ -4,8 +4,6 @@ function getComputerChoice () {
     return randomChoice
 }
 
-console.log(getComputerChoice())
-
 function playRound (playerSelection, computerSelection) {
     if (playerSelection === 'Rock' && computerSelection === 'Scissors'){
         return 'You Win! Rock beats Scissors'
@@ -23,3 +21,9 @@ function playRound (playerSelection, computerSelection) {
         return `It's a tie!`
     }
 } 
+
+const playerSelection = 'Rock';
+const computerSelection = getComputerChoice();
+console.log("You selected: " + playerSelection)
+console.log("Computer has selected: " + computerSelection)
+console.log(playRound(playerSelection, computerSelection));
