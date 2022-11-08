@@ -39,7 +39,16 @@ function game(playRound) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = window.prompt('Choose Rock, Paper, or Scissors: ')
         let score = (playerWins, playerLoses)
-        console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} `)
+        
+        console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie Rounds: ${playerTies}`)
 
-    }
-}
+        if (playerWins > playerLoses){
+            return 'Congrats! You are the winner!'
+        } else if (playerWins < playerLoses) {
+            return 'You Lose! Want to play again?'
+        } else {
+            return 'Tie game! Lets have another go!'
+        }
+    };
+
+};
