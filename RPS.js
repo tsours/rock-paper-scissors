@@ -14,25 +14,25 @@ function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection().toLowerCase()
     if (playerSelection === 'rock' && computerSelection === 'scissors'){
         console.log('You Win! Rock beats Scissors');
-        playerWins++;
+        playerWins = ++playerWins;
     } else if (playerSelection === 'rock' && computerSelection === 'paper'){
         console.log('You Lose! Paper beats Rock');
-        playerLoses++;
+        playerLoses = ++playerLoses;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         console.log('You Lose! Rock beats Scissors');
-        playerLoses++;
+        playerLoses = ++playerLoses;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         console.log('You win! Scissors beats Paper');
-        playerWins++;
+        playerWins = ++playerWins;
     } else if (playerSelection === 'paper' && computerSelection === 'rock'){
         console.log('You win! Paper beats Rock');
-        playerWins++;
+        playerWins = ++playerWins;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors'){
         console.log('You lose! Scissors beats Paper')
-        playerLoses++;
+        playerLoses = ++playerWins;
     } else {
         console.log(`It's a tie!`);
-        playerTies++;
+        playerTies = ++playerTies;
     }
 } 
 
