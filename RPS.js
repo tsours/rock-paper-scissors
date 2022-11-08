@@ -35,3 +35,11 @@ console.log("You selected: " + playerSelection)
 console.log("Computer has selected: " + computerSelection)
 console.log(playRound(playerSelection, computerSelection));
 
+function game(playRound) {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = window.prompt('Choose Rock, Paper, or Scissors: ')
+        let score = (playerWins, playerLoses)
+        console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} `)
+
+    }
+}
