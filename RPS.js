@@ -29,7 +29,7 @@ function playRound (playerSelection, computerSelection) {
         playerWins = ++playerWins;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors'){
         console.log('You lose! Scissors beats Paper')
-        playerLoses = ++playerWins;
+        playerLoses = ++playerLoses;
     } else {
         console.log(`It's a tie!`);
         playerTies = ++playerTies;
