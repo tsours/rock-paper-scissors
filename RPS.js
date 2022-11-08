@@ -6,19 +6,26 @@ function getComputerChoice () {
 
 function playRound (playerSelection, computerSelection) {
     if (playerSelection === 'Rock' && computerSelection === 'Scissors'){
-        return 'You Win! Rock beats Scissors'
+        console.log('You Win! Rock beats Scissors');
+        playerWins += playerWins + 1;
     } else if (playerSelection === 'Rock' && computerSelection === 'Paper'){
-        return 'You Lose! Paper beats Rock'
+        console.log('You Lose! Paper beats Rock');
+        playerLoses += playerLoses + 1;
     } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-        return 'You Lose! Rock beats Scissors'
+        console.log('You Lose! Rock beats Scissors');
+        playerLoses += playerLoses + 1;
     } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-        return 'You win! Scissors beats Paper'
+        console.log('You win! Scissors beats Paper');
+        playerWins += playerWins + 1;
     } else if (playerSelection === 'Paper' && computerSelection === 'Rock'){
-        return 'You win! Paper beats Rock'
+        console.log('You win! Paper beats Rock');
+        playerWins += playerWins + 1;
     } else if (playerSelection === 'Paper' && computerSelection === 'Scissors'){
-        return 'You lose! Scissors beats Paper'
+        console.log('You lose! Scissors beats Paper')
+        playerLoses += playerLoses + 1;
     } else {
-        return `It's a tie!`
+        console.log(`It's a tie!`);
+        playerTies += playerTies + 1
     }
 } 
 
@@ -27,3 +34,4 @@ const computerSelection = getComputerChoice();
 console.log("You selected: " + playerSelection)
 console.log("Computer has selected: " + computerSelection)
 console.log(playRound(playerSelection, computerSelection));
+
