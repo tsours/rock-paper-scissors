@@ -35,26 +35,23 @@ function playRound (playerSelection, computerSelection) {
         playerLoses = ++playerLoses;
       }   
     
-      console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie Rounds: ${playerTies}`)
+      console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie: ${playerTies}`)
 
-    //console.log("You selected: " + playerSelection)
-    //        console.log("Computer has selected: " + computerChoice)
-    if (playerWins == playerLoses){
-        return 'Tie game! Lets play again!'
-    } else if (playerWins > playerLoses) {
-        return 'Congrats! You win!'
-    } else {
-        return 'You Lose! Try again!'
-    }
 };
  
-//function game() {
-//    for (let i = 0; i < 5; i++) { 
- //       playerSelection = window.prompt('Choose Rock, Paper, or Scissors: ')       
-//        console.log("You selected: " + playerSelection)
-//        console.log("Computer has selected: " + computerChoice)
-//        
-//        console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie Rounds: ${playerTies}`)
-//    }
-//}
-console.log(playRound())
+function game() {
+    for (let i = 0; i < 13; i++) { 
+       playRound();
+       if (playerWins === 5){
+        console.log('Congrats You Win!!!');
+        break
+       } else if (playerLoses === 5){
+        console.log('You Lost! Play again???');
+        break
+       } else {
+        continue
+       };
+
+    }
+}
+console.log(game());
