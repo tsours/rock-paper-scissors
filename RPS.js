@@ -3,7 +3,8 @@ let playerLoses = 0;
 let playerTies = 0;
 let playerSelection;
 let computerSelection;
-let winner = '';
+
+let buttons = document.querySelectorAll('.button')
 
 function getComputerChoice() {
     let possibleChoices = ['rock', 'paper', 'scissors']
@@ -39,19 +40,19 @@ function playRound (playerSelection, computerSelection) {
 
 };
  
-function game() {
-    for (let i = 0; i < 13; i++) { 
-       playRound();
-       if (playerWins === 5){
-        console.log('Congrats You Win!!!');
-        break
-       } else if (playerLoses === 5){
-        console.log('You Lost! Play again???');
-        break
-       } else {
-        continue
-       };
+//function game() {
+ //   for (let i = 0; i < 13; i++) { 
+ //      playRound();
+//       if (playerWins === 5){
+ //       console.log('Congrats You Win!!!');
+ //       break
+ //      } else if (playerLoses === 5){
+ //       console.log('You Lost! Play again???');
+//        break
+//       } else {
+ //       continue
+//       };
 
-    }
-}
-console.log(game());
+//    }
+//}
+//console.log(game());
