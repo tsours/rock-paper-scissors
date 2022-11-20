@@ -21,26 +21,40 @@ function playRound (playerSelection) {
     console.log("You selected: " + playerSelection)
     console.log("Computer has selected: " + computerSelection)
     if (playerSelection == computerSelection){
-        console.log('Its a tie!');
         playerTies = ++playerTies;
+        tieScore();
         
     }else if (
         (playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'rock')
     ){
-        console.log('You Win!');
         playerWins = ++playerWins;
+        playerScore();
         
     }else {
-        console.log('You Lose!');
         playerLoses = ++playerLoses;
+        computerScore();
       }   
     
       console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie: ${playerTies}`)
 
 };
 
+function playerScore(){
+    let playerWinBox = document.querySelector("#playerWins");
+    playerWinBox.textContent = playerWins
+}
+
+function computerScore(){
+    let computerWinBox = document.querySelector("#playerLoses");
+    computerWinBox.textContent = playerLoses
+}
+
+function tieScore(){
+    let tieScoreBox = document.querySelector("#playerTies");
+    tieScoreBox.textContent = playerTies
+}
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         playRound(button.id)
