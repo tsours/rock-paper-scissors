@@ -5,6 +5,7 @@ let playerSelection;
 let computerSelection;
 
 let buttons = document.querySelectorAll('.button')
+const body = document.querySelector('body');
 
 function getComputerChoice() {
     let possibleChoices = ['rock', 'paper', 'scissors']
@@ -12,8 +13,8 @@ function getComputerChoice() {
     return randomChoice
 }
 
-function playRound (playerSelection, computerSelection) {
-    playerSelection = window.prompt('Choose Rock, Paper, or Scissors: ')
+
+function playRound (playerSelection) {
     computerSelection = getComputerChoice();
     playerSelection = playerSelection.toLowerCase();
 
@@ -39,6 +40,12 @@ function playRound (playerSelection, computerSelection) {
       console.log(`Current Score: You: ${playerWins} Computer: ${playerLoses} Tie: ${playerTies}`)
 
 };
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        playRound(button.id)
+    })
+})
  
 //function game() {
  //   for (let i = 0; i < 13; i++) { 
